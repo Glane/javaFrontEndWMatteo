@@ -1,0 +1,26 @@
+<html>
+	<body>
+		
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript">
+
+
+		var pet = {
+		  hunger: 2,
+		  feed: function() {
+		    this.hunger -= 1;
+		  }
+		};
+		pet.feed();
+		pet.feed();
+		console.log('Pet hunger should be zero:', pet.hunger);
+
+
+
+		</script>
+
+
+
+	</body>
+</html>

@@ -1,0 +1,253 @@
+<html>
+	<body>
+		
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript">
+
+
+
+
+
+
+
+
+		var revealSecret = function () {
+		  return this.secret;
+		};
+
+		var incept = function (person, func) {
+		  person.inception = func;
+		  var result = person.inception();
+		  alert(person.name + " said: " + result);
+		};
+
+		var spy = {
+		  name: "Mr. Smith",
+		  secret: "I like pie"
+		};
+		incept(spy, revealSecret);
+
+		var otherSpy = {
+		  name: "Dr. Tran",
+		  secret: "I can lick my elbow"
+		};
+		incept(otherSpy, revealSecret);
+
+
+
+
+
+
+
+		// var musicPlayer = {
+		//   currentlyPlaying: null,
+		//   play: function (song) {
+		//   	this.currentlyPlaying = song;
+		//   }
+		// };
+
+		// musicPlayer.play('Giant Steps');
+		// console.log('Music player should be playing "Giant Steps":', musicPlayer.currentlyPlaying);
+
+		// musicPlayer.play('Blue Glasses');
+		// console.log('Music player should be playing "Blue Glasses":', musicPlayer.currentlyPlaying);
+
+
+
+
+
+
+		// var wishingWell = {
+		//   coinCount: 2,
+		//   wishToss: function () {
+		//     this.coinCount += 1;
+		//   },
+		//   stealCoins: function (stolenCoins){
+		//   	this.coinCount -= stolenCoins;
+		//   	if (this.coinCount > 0){
+		//   		this.coinCount = this.coinCount
+		//   	}
+		//   	else{
+		//   		this.coinCount = 0;
+		//   	}
+		//   }
+		// };
+
+		// wishingWell.wishToss();
+		// console.log('Wishing well should have 3 coins:', wishingWell.coinCount);
+
+		// wishingWell.stealCoins(2);
+		// console.log('Wishing well should have 1 coin:', wishingWell.coinCount);
+
+		// wishingWell.stealCoins(5);
+		// console.log('Wishing well should have 0 coins:', wishingWell.coinCount);
+
+
+
+
+
+
+		// var sprayPixieDust = function (person) {
+		//   person.pixieDust += 1;
+		// };
+
+		// var wendy = {
+		// 	pixieDust: 0,
+		//   fly: function () {
+		//     if (this.pixieDust < 2) {
+		//       return 'thump!';
+		//     }
+		//     else {
+		//       return 'I can fly!';
+		//     }
+		//   }
+		// };
+
+		// console.log('Wendy should not be able to fly (yet):', wendy.fly());
+
+		// sprayPixieDust(wendy);
+		// console.log('Wendy should STILL not be able to fly:', wendy.fly());
+
+		// sprayPixieDust(wendy);
+		// console.log('Can she fly now?', wendy.fly());
+
+
+
+
+
+		// var water = function (amount) {
+		//   this.happiness += amount;
+		//   console.log('You watered the ' + this.plantType);
+		// };
+
+
+
+		// var greenHouse = {
+		//   room1: {
+		//     plantType: 'strawberries',
+		//     happiness: 3,
+		//     water: water
+		//   },
+		//   room2: {
+		//     plantType: 'eggplants',
+		//     happiness: 1,
+		//     water: water
+		//   }
+		// };
+
+		// greenHouse.room1.water(2);
+		// console.log('Strawberries should have 5 happiness:', greenHouse.room1.happiness);
+
+		// greenHouse.room2.water(23);
+		// console.log('Eggplants should have 24 happiness:', greenHouse.room2.happiness);
+
+
+
+
+
+
+		// var bagOfChips = {
+		//   count: 2,
+		//   takeChip: function () {
+		//     if (this.count === 0) {
+		//       alert('No chips left!');
+		//     }
+		//     else {
+		//       this.count -= 1;
+		//       alert('munch');
+		//     }
+		//   }
+		// };
+		// bagOfChips.takeChip();
+		// bagOfChips.takeChip();
+		// bagOfChips.takeChip();
+
+
+
+
+
+
+		// // Javascript
+		// var game = {
+		//   tries: 0,
+		//   updateTries: function () {
+		//     this.tries += 1;
+		//   }
+		// };
+		// game.updateTries();
+
+		// alert(game.tries +' times tried');
+
+
+
+
+		// var juggler = {
+		//   itemCount: 0,
+		//   // This returns the number of items dropped
+		//   juggle: function () {
+		//     this.itemCount += 1;
+		//     var fate = parseInt(Math.random() * 10);
+		//     if (this.itemCount > 2 && fate % 2 === 0) {
+		//       this.drop();
+		//       // Uh oh! The juggler dropped an item
+		//       return 1;
+		//     }
+		//     else {
+		//       // A skilled juggler! He dropped zero items
+		//       return 0;
+		//     }
+		//   },
+		//   drop: function () {
+		//     console.log('ah!');
+		//     this.itemCount = this.itemCount - 1;
+		//   }
+		// };
+
+		// juggler.juggle();
+		// juggler.juggle();
+		// console.log('Juggler should be juggling two items:', juggler.itemCount);
+
+		// var dropCount = 0;
+
+		// dropCount += juggler.juggle();
+		// dropCount += juggler.juggle();
+		// dropCount += juggler.juggle();
+
+		// console.log('Total number of items should be 5:', juggler.itemCount + dropCount);
+		// console.log('Juggler should be juggling at least two items:', juggler.itemCount);
+
+
+
+
+
+
+		// var pancakeHouse = {
+		//   makePancake: function() {
+		//     return { foodType: 'pankcake' };
+		//   }
+		// };
+		// var pancake = pancakeHouse.makePancake();
+		// console.log('Pancake should be a pancake:', pancake.foodType);
+
+
+
+
+		// var pet = {
+		//   hunger: 2,
+		//   feed: function() {
+		//     this.hunger -= 1;
+		//   }
+		// };
+		// pet.feed();
+		// pet.feed();
+		// console.log('Pet hunger should be zero:', pet.hunger);
+
+
+
+		</script>
+
+
+
+	</body>
+</html>
